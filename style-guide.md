@@ -13,6 +13,8 @@ The designs were created to the following widths:
 
 - Soft red: hsl(10, 79%, 65%)
 - Cyan: hsl(186, 34%, 60%)
+- Blue: hsl(228, 45%, 44%)
+
 
 ### Neutral
 
@@ -25,8 +27,7 @@ The designs were created to the following widths:
 
 ### Body Copy
 
-- Font size: 18px
-
+- Font size: 18px, 11px
 ### Font
 
 - Family: [DM Sans](https://fonts.google.com/specimen/DM+Sans)
