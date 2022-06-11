@@ -1,6 +1,11 @@
 body {
   font-family: "DM Sans", sans-serif;
   margin: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: hsl(27, 66%, 92%);
+
 }
 
 .invisible {
@@ -12,8 +17,10 @@ body {
 }
 
 hr {
+  width: 100%;
+  grid-column: 1 / 8;
   border: 0.06rem solid hsl(27, 66%, 92%);
-  border-width: 0.06rem 0rem 0rem 0rem;
+  border-width: 0.06rem 0 0 0 ;
 }
 
 h4 {
@@ -33,69 +40,61 @@ h6 {
 }
 
 .container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   background-color: hsl(27, 66%, 92%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-column: 2;
+  position: relative;
+  top: 20%;
 }
 
 /* Balance */
 
 .balance {
   background-color: hsl(10, 79%, 65%);
-  width: 35%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: fit-content;
+  color: white;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  color: white;
 }
 
-.margin-balance {
-  display: flex;
-  flex-direction: row;
-  margin: 0.5rem 1.5rem;
-  justify-content: space-between;
-  
-}
 
 .balance-flex {
-  display: flow;
-  flex-direction: column;
+  margin: 0rem 2rem;
 }
 
-.margin-balance img {
-  float: right;
+img {
+  justify-self: end;
+  align-self: center;
+  margin: 0rem 2rem;
 }
 /* Expenses */
 
 .expenses {
+  display: grid;
   background-color: white;
-  width: 35%;
+  height: fit-content;
   border-radius: 1rem;
 }
 
-.margin-expenses {
-  margin: 1.5rem;
-}
 
-.margin-expenses h2 {
+.expenses h2 {
   color: hsl(25, 47%, 15%);
+  margin: 1.5rem 2rem 0;
+  white-space: nowrap;
 }
 
-.container-expenses {
-  display: flex;
-  position: relative;
-  flex-direction: row; 
-  justify-content: space-between;
-  align-items: flex-end; 
+.item { justify-self: center;}
+
+.last-week{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  align-items: end;
+  margin: 0rem 2rem 0;
   
-}
-
-.container-expenses div {
-  flex: 1 1 0px;
 }
 
 .top-bar {
@@ -109,8 +108,9 @@ h6 {
 .bar {
   height: 10rem;
   margin: 0 0.5rem;
-  border-radius: 5px;
+  border-radius: 0.2rem;
   background-color: hsl(10, 79%, 65%);
+  width: 2.5rem;
 
 }
 
@@ -124,6 +124,7 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0fr 0fr;
+  margin: 0rem 2rem 2rem;
 }
 
 #item1 {
@@ -164,7 +165,18 @@ h6 {
 .attribution {
   font-size: 11px;
   text-align: center;
+  grid-row: 2;
+  grid-column: 2;
+  position: relative;
+  top:20%;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 1000px) {
+  .bar {
+    
+  }
 }
