@@ -7,13 +7,18 @@ body {
   visibility: hidden;
 }
 
+.weekday {
+  background-color: hsl(186, 34%, 60%);
+}
+
 hr {
   border: 0.06rem solid hsl(27, 66%, 92%);
   border-width: 0.06rem 0rem 0rem 0rem;
 }
 
 h4 {
-  color: grey;
+  color: white;
+  padding: 0.3rem;
 }
 
 h5 {
@@ -82,8 +87,10 @@ h6 {
 
 .container-expenses {
   display: flex;
+  position: relative;
   flex-direction: row; 
-  justify-content: space-between; 
+  justify-content: space-between;
+  align-items: flex-end; 
   
 }
 
@@ -96,20 +103,19 @@ h6 {
   height: 2rem;
   margin: 0 -0.05rem 0.5rem;
   border-radius: 5px;
+  text-align: center;
 }
 
 .bar {
-  height: 5rem;
+  height: 10rem;
   margin: 0 0.5rem;
   border-radius: 5px;
   background-color: hsl(10, 79%, 65%);
 
 }
 
-
-
-.bar:hover {
-  background-color: hsl(10, 69%, 70%);
+.bar:active {
+  opacity: 0.75;
 }
 
 /*Total*/
