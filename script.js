@@ -47,7 +47,7 @@ function showTopBarMobile() {
   for (let i = 0; i < 7; i++) {
     document
       .querySelectorAll(".bar")
-      [i].addEventListener("touchdown", function () {
+      [i].addEventListener("pointerdown", function () {
         document.querySelectorAll(".top-bar")[i].classList.remove("invisible");
       });
   }
@@ -55,7 +55,7 @@ function showTopBarMobile() {
   for (let i = 0; i < 7; i++) {
     document
       .querySelectorAll(".bar")
-      [i].addEventListener("touchup", function () {
+      [i].addEventListener("pointerup", function () {
         document.querySelectorAll(".top-bar")[i].classList.add("invisible");
       });
   }
