@@ -43,6 +43,24 @@ function showTopBar() {
   }
 }
 
+function showTopBarMobile() {
+  for (let i = 0; i < 7; i++) {
+    document
+      .querySelectorAll(".bar")
+      [i].addEventListener("touchdown", function () {
+        document.querySelectorAll(".top-bar")[i].classList.remove("invisible");
+      });
+  }
+
+  for (let i = 0; i < 7; i++) {
+    document
+      .querySelectorAll(".bar")
+      [i].addEventListener("touchup", function () {
+        document.querySelectorAll(".top-bar")[i].classList.add("invisible");
+      });
+  }
+}
+
 function changeBarColorbyCurrentDay() {
   let dayOfTheWeek = new Date().getDay();
   for (let i = 0; i < document.querySelectorAll(".bar").length; i++) {
@@ -55,4 +73,5 @@ function changeBarColorbyCurrentDay() {
 loadTopBarsAmount();
 setLowerBarHeight();
 showTopBar();
+showTopBarMobile();
 changeBarColorbyCurrentDay();
